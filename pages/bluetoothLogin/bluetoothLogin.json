@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "设备连接",
+  "usingComponents": {
+    "van-popup": "../../miniprogram_npm/vant-weapp/popup/index"
+  }
+}

@@ -1,0 +1,11 @@
+<!--pages/impower/impower.wxml-->
+<view class="container" style="height: {{height}}px;">
+  <image src="/image/bgImg.png" style="height: {{height}}px;width:100%;"></image>
+  <view class="login-panel">
+    <van-cell-group>
+      <van-field value="{{ username }}" type="text" label="账号" placeholder="请输入用户名/手机号" bind:change="nameChange" />
+      <van-field value="{{ password }}" type="password" label="密码" placeholder="请输入密码" bind:change="pwdChange" />
+    </van-cell-group>
+  </view>
+  <view class="btn-login" bindtap="goLogin">登 录</view>
+</view>

@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="top-line">
+    <view class="rout-item" bindtap="showSelect">
+      <image class="rout-image" src="/image/rout.png"></image>
+      <view>
+        {{ courtsName }}
+        <image class="arrow-img" src="/image/arrow.png"></image>
+      </view>
+    </view>
+
+    <button class="handUser" bindtap="go2detail" size="mini"  >切换用户</button>
+    
+    <image class="add-image" src="/image/add_terminal.png" bindtap="goScan"></image>
+    
+  </view>
+
+  <view class="terminal-list">
+    <view class="terminal-item" wx:for="{{ terminalList }}" data-terminal='{{ item }}' data-index='{{ index }}'
+      bindtap="terminalDetails"
+      bindlongpress="delTerminal">
+      <view class="item-image">
+        <image src='{{ item.Status==0?"/image/terminal_on.png":"/image/terminal_off.png" }}'></image>
+      </view>
+      <view class="item-address">{{ item.IAddress }}</view>
+    </view>
+  </view>
+
+  <van-action-sheet
+    show="{{ show }}"
+    actions="{{ actions }}"
+    bind:cancel="cancelDel"
+    bind:select="selectDel"
+    cancel-text="取消"
+    description="确认要删除该设备？"
+  />
+</view>

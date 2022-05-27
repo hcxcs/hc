@@ -1,0 +1,19 @@
+<view class='com-selectBox'>
+    <view class='com-sContent' bindtap='selectToggle'>
+        <view class='com-sTxt'>{{nowText}}</view>
+        <image src='/image/show_more.png'  class='com-sImg'></image>
+    </view>
+    <view class='com-sList' wx:if="{{selectShow}}">
+        <!-- <view wx:for="{{propArray}}" data-index="{{index}}" wx:key='' class='com-sItem' bindtap='setText'>{{item.text}}</view> -->
+        <view>
+          <!-- <view style="padding:5rpx 0;">
+            <image wx:if='{{ isBranch }}' bindtap='toggle' src="{{ open ? '/image/show_less.png' : '/image/show_more.png'}}"  class='item-sImg'></image>
+            <image wx:else src='/image/page_turning_right.png'  class='item-sImg'></image>
+            <text bindtap='tapItem' data-itemid='{{ model.id }}' data-value='{{ model.text }}'>{{ model.text }}</text>
+          </view> -->
+          <view style='padding-left: 25rpx;' wx:if='{{ isBranch }}' hidden='{{ !open }}'>
+            <mytree wx:for='{{ model.nodes }}' wx:key='id' model='{{ item }}'  bind:tapitem='tapItem'></mytree>
+          </view>
+        </view>
+    </view>
+</view>

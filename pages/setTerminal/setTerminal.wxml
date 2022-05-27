@@ -1,0 +1,45 @@
+<!--pages/setTerminal/setTerminal.wxml-->
+
+<view class="container">
+  <view class="dataItem">
+    <text>选择指令</text>
+    <input class="noIpt" value="{{ CmdName }}" data-value="{{ CmdName }}" data-id="{{ SDID }}" data-type="{{Type}}" disabled="disable" bindtap="showPicker"></input>
+  </view>
+  <view class="dataItem" wx:if="{{ isMonitor }}">
+    <text>监测终端</text>
+    <input class="noIpt" value="{{ FiledValue }}" data-value="{{ FiledValue }}" data-point="{{ PointIndex }}" disabled="disable" bindtap="showMonitor"></input>
+  </view>
+
+  <view class="read">
+    <view class="read-title">读取区</view>
+    <view class="read-txt">
+      <view wx:if="{{ F10.length>0 }}">
+        <view wx:for="{{ F10 }}">
+          <view>{{ item.Type == 0 ? "三相表" : "单相表" }}监测终端地址：{{ item.FiledValue }}</view>
+          <view>测量点号：{{ item.PointIndex }}</view>
+        </view>
+      </view>
+      <view wx:if="{{ F25.length>0 }}">
+        <view wx:for="{{ F25 }}">
+          {{ item.DisplayName }}：{{ item.FiledValue }}{{ item.Unit }}
+        </view>
+      </view>
+      <view wx:if="{{ F2.length>0 }}">
+        <view wx:for="{{ F2 }}">
+          {{ item.DisplayName }}：{{ item.FiledValue }}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="btn" bindtap="addTerminal">发送命令</view>
+
+<view class="picker" wx:if="{{ isPicker }}">
+  <van-picker columns="{{ columns }}" value-key="CmdName" default-index="{{ index }}" show-toolbar="true" title="指令列表" bind:confirm="pickerConfirm" bind:cancel="pickerCancel" />
+</view>
+<view class="picker" wx:if="{{ isPicker2 }}">
+  <van-picker columns="{{ monitor }}" value-key="FiledValue" default-index="{{ mIndex }}" show-toolbar="true" title="监测终端列表" bind:confirm="monitorConfirm" bind:cancel="monitorCancel" />
+</view>
+
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

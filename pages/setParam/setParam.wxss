@@ -1,0 +1,21 @@
+.container{
+  position: relative;
+}
+.panel{
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.link{
+  display: block;
+  width: 70%;
+  margin: 20rpx auto;
+  padding: 7rpx 20rpx;
+  background-color: #2196F3;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  border-radius: 5rpx;
+}

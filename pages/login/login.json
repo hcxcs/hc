@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "能效安装配置工具",
+  "usingComponents": {
+    "van-field": "/miniprogram_npm/vant-weapp/field/index"
+  }
+}

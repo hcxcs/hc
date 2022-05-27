@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "ROLA通信频率",
+  "onReachBottomDistance": 50,
+  "navigationBarBackgroundColor": "#2f9bff",
+  "navigationBarTextStyle": "white",
+  "usingComponents": { 
+    "van-picker": "../../miniprogram_npm/vant-weapp/picker/index",
+    "van-popup": "../../miniprogram_npm/vant-weapp/popup/index"
+  }
+}

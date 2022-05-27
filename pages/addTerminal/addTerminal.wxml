@@ -1,0 +1,15 @@
+<view class="container">
+  <view style="height:70rpx;position:relative;">
+    <image class="scanImg" src="/image/scan.png" bindtap="getScancode"></image>
+  </view>
+  <view class="dataItem">
+    <text>终端地址</text>
+    <input class="noIpt" value="{{ IAddress }}" data-value="{{ IAddress }}" bindinput="addressInput"></input>
+  </view>
+  <view class="dataItem">
+    <text>资产编号</text>
+    <input class="noIpt" value="{{ ICode }}" data-value="{{ ICode }}" bindinput="codeInput"></input>
+  </view>
+</view>
+
+<view class="btn" bindtap="addTerminal"> 添 加 </view>

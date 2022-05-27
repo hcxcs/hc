@@ -1,0 +1,6 @@
+<!--pages/choiceRout/choiceRout.wxml-->
+<view class="contaienr">
+  <mytree model='{{selectArray}}' bind:tapitem='tapItem'></mytree>
+</view>
+
+<view class="check-btn" bindtap="checkRout">确认台区<text wx:if="{{ courtsName!='' }}">：{{ courtsName }}</text></view>

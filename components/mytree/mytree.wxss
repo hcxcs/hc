@@ -1,0 +1,18 @@
+/* pages/components/mytree/mytree.wxss */
+.container{
+  font-size: 30rpx;
+  color: #666;
+}
+
+.item-sImg{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+
+.check-img{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  float: right;
+}

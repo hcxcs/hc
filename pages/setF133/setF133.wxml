@@ -1,0 +1,30 @@
+<!--pages/setF133/setF133.wxml-->
+<view class="main">
+  <view class="dataItem">
+    <text>监测终端</text>
+    <input class="noIpt" value="{{ FiledValue }}" data-value="{{ FiledValue }}" data-point="{{ PointIndex }}" disabled="disable" bindtap="showMonitor"></input>
+  </view>
+  <form bindsubmit="orderForm">
+
+  <view class="container">
+    <view class="item" wx:for="{{ orderList }}" wx:for-item="item">
+      <view class="des">{{ item.des }}</view>
+      <view class="line" wx:for="{{ item.data }}" wx:for-item="order">
+        <text class="order-title">{{ order.title }}</text>
+        <input class="order-ipt" type="text" name="order" value="{{ valueList[order.index].FiledValue }}" bindinput="orderInput" data-index="{{ order.index }}" data-unit="{{ order.unit }}"/>
+        <text class="order-unit">{{ order.unit }}</text>
+      </view>
+    </view>
+
+    <view class="btn-line">
+      <button bindtap="orderRead">读 取</button>
+      <button formType="submit" style="margin-left:150rpx;">设 置</button>
+    </view>
+  </view>
+
+  </form>
+</view>
+<view class="picker" wx:if="{{ isPicker2 }}">
+  <van-picker columns="{{ monitor }}" value-key="FiledValue" default-index="{{ mIndex }}" show-toolbar="true" title="监测终端列表" bind:confirm="monitorConfirm" bind:cancel="monitorCancel" />
+</view>
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

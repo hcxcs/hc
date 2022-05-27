@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "交互终端",
+  "onReachBottomDistance": 50,
+  "navigationBarBackgroundColor": "#2f9bff",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-popup": "../../miniprogram_npm/vant-weapp/popup/index",
+    "van-radio": "../../miniprogram_npm/vant-weapp/radio/index",
+    "van-radio-group": "../../miniprogram_npm/vant-weapp/radio-group/index"
+  }
+}

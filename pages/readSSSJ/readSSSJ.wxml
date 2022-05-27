@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="item-panel">
+    <!-- <view class="view-item">
+      <text class="ipt_left">地址</text>
+      <input class="ipt_right" name="address" type="number" value="{{ address }}" bindinput="reseverAddress"/>
+    </view> -->
+    <view class="view-item">
+      <text class="ipt_left">地址</text>
+      <input wx:if="{{ isInput }}" class="ipt_right" name="address" type="number" value="{{ address }}" bindinput="reseverAddress"/>
+      <input wx:else class="ipt_right" value="{{ address }}" data-value="{{ address }}" data-index="{{ index }}" disabled="disabled" bindtap="showPicker"/>
+    </view>
+  </view>
+  <view class="read">
+    <view class="read-title">读取区</view>
+    <view class="read-txt">
+      <view wx:for="{{ responseList }}">
+        {{item.DisplayName}}：{{item.FiledValue}}{{item.Unit}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="btn" bindtap="orderRead">发送命令</view>
+
+<view class="picker" wx:if="{{ isPicker }}">
+  <van-picker columns="{{ columns }}" data-index="{{index}}" value-key="FiledValue" default-index="{{ index }}" show-toolbar="true" bind:confirm="pickerConfirm" bind:cancel="pickerCancel" />
+</view>
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

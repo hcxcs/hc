@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "交互终端",
+  "onReachBottomDistance": 50,
+  "navigationBarBackgroundColor": "#2f9bff",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {}
+}

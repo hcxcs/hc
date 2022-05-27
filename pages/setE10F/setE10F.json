@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "主站通信参数",
+  "onReachBottomDistance": 50,
+  "navigationBarBackgroundColor": "#2f9bff",
+  "navigationBarTextStyle": "white",
+  "usingComponents": { 
+    "van-picker": "../../miniprogram_npm/vant-weapp/picker/index",
+    "van-popup": "../../miniprogram_npm/vant-weapp/popup/index",
+    "van-checkbox": "../../miniprogram_npm/vant-weapp/checkbox/index",
+    "van-checkbox-group": "../../miniprogram_npm/vant-weapp/checkbox-group/index"
+  }
+}

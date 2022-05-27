@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="panel">
+    <button class="link" data-href="../setE08F/setE08F" bindtap="jumpUrl">计量点参数-基本</button>
+    <button class="link" data-href="../setE01X/setE01X" bindtap="jumpUrl">计量点参数-规格</button>
+    <button class="link" data-href="../setE08X/setE08X" bindtap="jumpUrl">计量点参数-阈值</button>
+    <button class="link" data-href="../setF31/setF31" bindtap="jumpUrl">终端对时命令</button>
+    <button class="link" data-href="../setF90/setF90" bindtap="jumpUrl">ROLA通信频率</button>
+    <button class="link" data-href="../setE02/setE02" bindtap="jumpUrl">告警判断屏蔽字</button>
+    <button class="link" data-href="../setE10F/setE10F" bindtap="jumpUrl">主站通信参数</button>
+    <!-- <button class="link" data-href="../readSJTC/readSJTC" bindtap="jumpUrl">数据透传</button> -->
+    <button class="link" data-href="../readSSSJ/readSSSJ" bindtap="jumpUrl">读瞬时数据</button>
+  </view>
+</view>

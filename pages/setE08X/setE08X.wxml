@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="item-panel">
+    <view class="view-item">
+      <text class="ipt_left">信息点Pn</text>
+      <input class="ipt_right" name="pointIndex" type="number" value="{{ pointIndex }}" bindinput="reseverPointIndex"/>
+    </view>
+    <view class="view-item">
+      <van-checkbox value="{{ isFull }}" shape="square" bind:change="fullChange">
+        全选
+      </van-checkbox>
+    </view>
+    <view class="view-item" wx:for="{{ checkList }}">
+      <van-checkbox value="{{ item.isCheck }}" data-index="{{ index }}" shape="square" bind:change="onChange">
+        {{ item.checkName }}
+      </van-checkbox>
+      <view wx:if="{{item.ipt === 'multiple'}}" style="padding-top: 15rpx;">
+        <view wx:for="{{item.columns}}" wx:for-index="index2" wx:for-item="item2">
+          <text class="ipt_left">{{ item2.keyValue }}</text>
+          <input class="ipt_right" type="text" value="{{ item2.FiledValue }}" data-index="{{ index }}" data-index2="{{ index2 }}"  bindinput="reseverMultiple"/>
+        </view>
+      </view>
+      <view wx:else>
+        <input class="ipt" type="text" value="{{ item.FiledValue }}" data-index="{{ index }}"  bindinput="reseverNumber"/>
+      </view>
+    </view>
+  </view>
+  <view class="btn-line">
+    <button bindtap="orderRead">读 取</button>
+    <button bindtap="orderSet" style="margin-left:150rpx;">设 置</button>
+  </view>
+</view>
+
+
+
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

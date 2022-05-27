@@ -1,0 +1,48 @@
+/* pages/setF90/setF90.wxss */
+
+.container{
+  padding: 30rpx 16rpx;
+}
+
+.dataItem{
+  padding: 40rpx 20rpx 0;
+  position: relative;
+}
+
+.dataItem>text{
+  position: absolute;
+  left: 30rpx;
+  bottom: 17rpx;
+}
+
+.noIpt{
+  border: 2rpx solid #d3d3d3;
+  border-radius: 5px;
+  padding: 15rpx;
+  width: 70%;
+  margin-left: 160rpx;
+}
+
+.btn-line{
+  position: fixed;
+  width: 100%;
+  bottom: 100rpx;
+  text-align: center;
+}
+.btn-line>button{
+  display: inline-block;
+  line-height: normal;
+  padding: 20rpx 70rpx;
+  font-size: 30rpx;
+  border: none;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.picker{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border: 2rpx solid #f2f2f2;
+  z-index: 999;
+}

@@ -1,0 +1,144 @@
+/* pages/terminalDetails/terminalDetails.wxss */
+.container{
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 30rpx 10rpx;
+  background-color: #f8f8f8;
+}
+.terminal-panel{
+  position: relative;
+  margin: 0 20rpx 30rpx;
+  padding: 70rpx 50rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
+.terminal-line{
+  position: relative;
+  padding: 7rpx 0;
+}
+.terminal-line>text{
+  font-size: 28rpx;
+}
+.terminal-line .line-title{
+  display: inline-block;
+  width: 200rpx;
+  color: #444;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.line-remark{
+  font-size: 28rpx;
+  padding-left: 20rpx;
+  color: #2196f3;
+}
+.terminal-single image{
+  width: 150rpx;
+  height: 80rpx;
+}
+.terminal-loc>image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.terminal-btn{
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  padding: 10rpx 30rpx;
+  background-color: #2196f3;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5rpx;
+}
+.monitor-panel{
+  position: relative;
+  margin: 0 20rpx;
+  padding: 30rpx 50rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
+.monitor-btn{
+  position: absolute;
+  top: 28rpx;
+  right: 30rpx;
+  padding: 10rpx 30rpx;
+  background-color: #2196f3;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5rpx;
+}
+.monitor-btn.left{
+  right: 160rpx;
+}
+.monitor-title{
+  color: #2196f3;
+  padding-bottom: 10rpx;
+}
+.single-line{
+  margin-top: 15rpx;
+  border: 2rpx dashed #2196f3;
+}
+.three-line{
+  border: 2rpx dashed #ffffff;
+}
+.single-item, .three-item{
+  padding: 7rpx 0 7rpx 30rpx;
+}
+.monitor-txt{
+  display: inline-block;
+  width: 180rpx;
+  color: #4395d6;
+  font-size: 30rpx;
+}
+.monitor-no{
+  color: #444444;
+  font-size: 30rpx;
+}
+.monitor-btn.btn-disable{
+  background-color: #b1b1b1;
+}
+.edit-panel{
+  width: 90vw;
+  height: 450rpx;
+  position: relative;
+  padding: 15rpx;
+  background-color: #ffffff;
+}
+.scanImg{
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  top: 30rpx;
+  right: 50rpx;
+}
+.edit-form{
+  margin-top: 80rpx;
+}
+.dataItem{
+  padding: 10rpx 20rpx;
+  position: relative;
+}
+.dataItem>text{
+  position: absolute;
+  left: 20rpx;
+  bottom: 30rpx;
+}
+.noIpt{
+  border: 2rpx solid #d3d3d3;
+  border-radius: 5px;
+  padding: 15rpx;
+  margin-top: 5rpx;
+  width: 65%;
+  margin-left: 165rpx;
+}
+.edit-btn{
+  float: right;
+  padding: 10rpx 50rpx;
+  background-color: #2196f3;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5rpx;
+  margin: 30rpx 50rpx;
+}

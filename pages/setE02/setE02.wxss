@@ -1,0 +1,47 @@
+/* pages/setF9/setF9.wxss */
+.container{
+  padding: 30rpx 16rpx;
+}
+.view-item{
+  position: relative;
+  padding: 10rpx;
+  font-size: 30rpx;
+}
+.item-panel{
+  height: 85vh;
+  border-bottom: 2rpx solid #d3d3d3;
+  overflow-x: scroll;
+}
+.btn-line{
+  text-align: center;
+  padding-top: 50rpx;
+}
+.btn-line>button{
+  display: inline-block;
+  line-height: normal;
+  padding: 20rpx 70rpx;
+  font-size: 30rpx;
+  border: none;
+  background-color: #2196F3;
+  color: #fff;
+}
+.noIpt{   
+  display: inline-block;
+  width: 65%;
+  border: 2rpx solid #d3d3d3;
+  border-radius: 5rpx;
+  padding: 6rpx;
+  margin-left: 200rpx;
+}
+.title{
+  position: absolute;
+  top: 16rpx;
+}
+.picker{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border: 2rpx solid #f2f2f2;
+  z-index: 999;
+}

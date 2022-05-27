@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "选择台区",
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "mytree": "/components/mytree/mytree"
+  }
+}

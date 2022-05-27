@@ -1,0 +1,40 @@
+.content {
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  bottom: 40rpx;
+}
+.venues_list{
+  border: 2rpx solid #d3d3d3;
+}
+.venues_item{
+  position: relative;
+  border-bottom: 1rpx dashed #d3d3d3;
+}
+.btn-connet{
+  position: absolute;
+  padding: 15rpx 40rpx;
+  font-size: 30rpx;
+  background-color: #2196f3;
+  color: #fff;
+  top: 50%;
+  right: 30rpx;
+  transform: translate(0,-50%);
+}
+.status, .sousuo, .msg, .msg1 {
+  display: block;
+  line-height: 35px;
+  margin: 0 10px;
+}
+.button {
+  display: inline-block;
+  width: 48%;
+  background-color: #2f9bff;
+  color: #fff;
+  margin-right: 11rpx;
+}
+.sendto {
+  line-height: 30px;
+  display: block;
+  margin: 10px;
+}

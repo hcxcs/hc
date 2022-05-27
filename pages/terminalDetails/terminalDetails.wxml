@@ -1,0 +1,91 @@
+<view class="container">
+  <view class="terminal-panel">
+    <view class="terminal-btn" bindtap="updateTerminal" data-terminalId="{{ terminalId }}">指令操作</view>
+    <view class="terminal-line terminal-name">
+      <text class="line-title">终端地址：</text>
+      <text>{{ IAddress }}</text>
+    </view>
+    <view class="terminal-line" wx:if="{{ ICode!='' }}">
+      <text class="line-title">资产编号：</text>
+      <text>{{ ICode }}</text>
+    </view>
+    <view class="terminal-line terminal-single">
+      <text class="line-title">信号强度：</text>
+      <text class="line-remark">{{ SignalStrength }}</text>
+      <image src='/image/{{ singleImg }}'></image>
+      <text class="line-remark" style="text-decoration: underline;" bindtap="readStrength">刷 新</text>
+    </view>
+    <view class="terminal-line terminal-loc">
+      <text class="line-title">坐标：</text>
+      <image src="/image/onloc.png"></image>
+      <text class="line-remark">({{ Coordinate }})</text>
+    </view>
+    <view class="terminal-line terminal-status">
+      <text class="line-title">状态：</text>
+      <text>{{ terminalStatus }}</text>
+    </view>
+  </view>
+  <view class="monitor-panel">
+    <view class="monitor-btn btn-disable" wx:if="{{ isDisable }}">读 取</view>
+    <view class="monitor-btn" bindtap="readMonitor" data-terminalId="{{ terminalId }}" wx:if="{{ isRead }}">读 取</view>
+    <view class="btnPanel" wx:if="{{ !isDisable&&!isRead }}">
+      <view class="monitor-btn" bindtap="addMonitor" data-terminalId="{{ terminalId }}">添加</view>
+      <view class="monitor-btn left" bindtap="delMonitor" data-terminalId="{{ terminalId }}" wx:if="{{ !(singleList.length+threeList.length == 0) }}">删除</view>
+    </view>
+    <view class="btnPanel" wx:if="{{ !isDisable&&!isRead&&isDel }}">
+      <view class="monitor-btn" bindtap="cancel" data-terminalId="{{ terminalId }}">取消</view>
+      <view class="monitor-btn left" bindtap="delMonitor" data-terminalId="{{ terminalId }}">删除</view>
+    </view>
+    <view class="monitor-title">监测终端列表</view>
+    <van-radio-group value="{{ radio }}" bind:change="delChange">
+    
+      <view class="single-line" wx:for="{{ singleList }}" wx:for-item="item">
+        <view class="single-item" wx:for="{{ item }}" wx:for-item="items">
+          <van-radio name="{{ items.PointIndex }}" wx:if="{{ isDel }}" bindtap="delChange2" data-address="{{ items.No }}">
+              <text class="monitor-txt" bindtap="delChange2" data-address="{{ items.No }}">{{ items.PointIndex }}:{{ items.threeTxt }}</text>
+              <text class="monitor-no" bindtap="delChange2" data-address="{{ items.No }}">{{ items.No }}</text>
+          </van-radio>
+          <view wx:else>
+              <text class="monitor-txt">{{ items.PointIndex }}:{{ items.threeTxt }}</text>
+              <text class="monitor-no">{{ items.No }}</text>
+          </view>
+        </view>
+      </view>
+    </van-radio-group>
+
+    <van-radio-group value="{{ radio }}" bind:change="delChange">
+      <view class="three-line" wx:for="{{ threeList }}" wx:for-item="item">
+        <view class="three-item" wx:if="{{ isDel }}">
+          <van-radio name="{{ item.PointIndex }}" bindtap="delChange2" data-address="{{ item.No }}">
+              <text class="monitor-txt" bindtap="delChange2" data-address="{{ item.No }}">{{ item.PointIndex }}:{{ item.threeTxt }}</text>
+              <text class="monitor-no" bindtap="delChange2" data-address="{{ item.No }}">{{ item.No }}</text>
+          </van-radio>
+        </view>
+        <view class="three-item" wx:else>
+          <text class="monitor-txt">{{ item.PointIndex }}:{{ item.threeTxt }}</text>
+          <text class="monitor-no">{{ item.No }}</text>
+        </view>
+      </view>
+    </van-radio-group>
+
+
+  </view>
+</view>
+
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>
+<van-popup show="{{ isEdit }}" closeable bind:close="editCancel">
+  <view class="edit-panel">
+    <image class="scanImg" src="/image/scan.png" bindtap="getScancode"></image>
+    <view class="edit-form">
+      <view class="dataItem">
+        <text>测量点号</text>
+        <input class="noIpt" value="{{ addPoint }}" data-value="{{ addPoint }}" bindinput="pointInput"></input>
+      </view>
+      <view class="dataItem">
+        <text>终端地址</text>
+        <input class="noIpt" value="{{ addMonitor }}" data-value="{{ addMonitor }}" bindinput="addressInput"></input>
+      </view>
+    </view>
+    <view class="edit-btn" bindtap="addConfirm">添 加</view>
+  </view>
+</van-popup>

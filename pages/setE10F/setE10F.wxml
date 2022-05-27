@@ -1,0 +1,44 @@
+
+<view class="container">
+  <view class="item-panel">
+    <view class="view-item">
+      <van-checkbox value="{{ isFull }}" shape="square" bind:change="fullChange">
+        全选
+      </van-checkbox>
+    </view>
+    <view class="view-item" wx:for="{{ checkList }}">
+      <van-checkbox value="{{ item.isCheck }}" data-index="{{ index }}" shape="square" bind:change="onChange">
+        {{ item.checkName }}
+      </van-checkbox>
+      <view wx:if="{{item.ipt === 'picker'||item.ipt === 'multiple'}}">
+        <input class="noIpt" value="{{ item.FiledValue }}" data-value="{{ item.FiledValue }}" data-index="{{ index }}" disabled="disable" bindtap="showPicker"/>
+      </view>
+      <view wx:if="{{item.ipt === 'multiple'||item.ipt === 'ip'}}">
+        <view class="ip-item" wx:for="{{ item.ips }}" wx:for-item="item2" wx:for-index="index2">
+          <input class="ip-ipt" name="iptIp{{index}}{{index2}}" type="number" value="{{ item2.FiledValue }}" data-index="{{ index }}" data-index2="{{ index2 }}" bindinput="reseverIp"/>
+          <text wx:if="{{index2<item.ips.length-1}}">.</text>
+        </view>:
+        <input class="ip-ipt" name="iptPoint{{index}}" type="number" value="{{ item.point }}" data-index="{{ index }}" bindinput="reseverPoint"/>
+      </view>
+      <view wx:if="{{item.ipt === 'number'}}">
+        <input class="ipt" name="{{item.type}}" type="text" value="{{ item.FiledValue }}" data-index="{{ index }}" bindinput="reseverNumber"/>
+      </view>
+      <!-- <view wx:if="{{item.ipt === 'multiple'}}" style="padding-top: 15rpx;">
+        <view wx:for="{{item.columns}}" wx:for-index="index2" wx:for-item="item2">
+          <text class="ipt_left">{{ item2.keyValue }}</text>
+          <input class="ipt_right" name="{{item2.type}}" type="number" value="{{ item2.FiledValue }}"  bindinput="reseverMultiple"/>
+        </view>
+      </view> -->
+      <view class="picker" wx:if="{{ isPicker===item.type }}">
+        <van-picker columns="{{ item.columns }}" data-index="{{index}}" value-key="FiledValue" default-index="{{ item.index }}" show-toolbar="true" bind:confirm="pickerConfirm" bind:cancel="pickerCancel" />
+      </view>
+    </view>
+  </view>
+  <view class="btn-line">
+    <button bindtap="orderRead">读 取</button>
+    <button bindtap="orderSet" style="margin-left:150rpx;">设 置</button>
+  </view>
+</view>
+
+
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

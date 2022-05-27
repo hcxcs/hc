@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="dataItem">
+    <text>发射功率</text>
+    <input class="noIpt" value="{{ FiledValue }}" data-value="{{ FiledValue }}" data-point="{{ PointIndex }}" disabled="disable" bindtap="showPicker"></input>
+  </view>
+
+  <view class="btn-line">
+      <button bindtap="orderRead">读 取</button>
+      <button bindtap="orderSet" style="margin-left:150rpx;">设 置</button>
+    </view>
+</view>
+
+<view class="picker" wx:if="{{ isPicker }}">
+  <van-picker columns="{{ columns }}" value-key="FiledValue" default-index="{{ index }}" show-toolbar="true" bind:confirm="pickerConfirm" bind:cancel="pickerCancel" />
+</view>
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

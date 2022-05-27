@@ -1,0 +1,22 @@
+/* pages/login/login.wxss */
+.login-panel{
+  position: absolute;
+  width: 80%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.btn-login{
+  position: absolute;
+  padding: 12rpx 150rpx;
+  margin-top: 170rpx;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: inline-block;
+  background-color: #2196f3;
+  color: #ffffff;
+  font-size: 30rpx;
+  border-radius: 5rpx;
+}

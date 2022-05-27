@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="panel">
+    <button class="link" data-href="../setTerminal/setTerminal" bindtap="jumpUrl">读取指令</button>
+    <button class="link" data-href="../setF3/setF3" bindtap="jumpUrl">F3:主站IP地址和端口</button>
+    <button class="link" data-href="../setF9/setF9" bindtap="jumpUrl">F9:终端事件记录配置设置</button>
+    <button class="link" data-href="../setF31/setF31" bindtap="jumpUrl">F31:终端对时命令</button>
+    <button class="link" data-href="../setF90/setF90" bindtap="jumpUrl">F90:ROLA通信频率</button>
+    <button class="link" data-href="../setF133/setF133" bindtap="jumpUrl">F133:测量点限值参数（电参量）</button>
+  </view>
+</view>

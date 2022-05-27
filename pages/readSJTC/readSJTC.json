@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "数据透传",
+  "onReachBottomDistance": 50,
+  "navigationBarBackgroundColor": "#2f9bff",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-popup": "../../miniprogram_npm/vant-weapp/popup/index"
+  }
+}

@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="time-title">当前时间</view>
+  <view class="time">{{ nowTime }}</view>
+  <view class="btn-time" bindtap="btnSet">设 置</view>
+</view>
+
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

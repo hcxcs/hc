@@ -1,0 +1,89 @@
+/* pages/setF133/setF133.wxss */
+.main{
+  height: 90vh;
+  overflow-x: scroll;
+  border-bottom: 2rpx solid #d3d3d3;
+}
+.dataItem{
+  padding: 40rpx 20rpx 0;
+  position: relative;
+}
+
+.dataItem>text{
+  position: absolute;
+  left: 30rpx;
+  bottom: 17rpx;
+}
+.container{
+  padding: 30rpx 16rpx;
+}
+
+.noIpt{
+  border: 2rpx solid #d3d3d3;
+  border-radius: 5px;
+  padding: 15rpx;
+  width: 70%;
+  margin-left: 160rpx;
+}
+.item{
+  position: relative;
+  margin: 50rpx 0 60rpx;
+  padding: 50rpx 10rpx 10rpx;
+  border: 2rpx dashed #2196F3;
+}
+.des{
+  position: absolute;
+  top: -45rpx;
+  left: 10rpx;
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+  color: #2196f3;
+  border: 2rpx solid #2196f3;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  z-index: 66;
+}
+.line{
+  position: relative;
+  padding-bottom: 20rpx;
+}
+.order-title{
+  display: inline-block;
+  width: 350rpx;
+  text-align: right;
+  font-size: 28rpx;
+}
+.order-ipt{
+  width: 220rpx;
+  margin: 0 10rpx -18rpx 15rpx;
+  padding: 3rpx 7rpx;
+  display: inline-block;
+  font-size: 30rpx;
+  border: 2rpx solid #d3d3d3;
+}
+.order-unit{
+  font-size: 28rpx;
+}
+.btn-line{
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 20rpx;
+}
+.btn-line>button{
+  display: inline-block;
+  line-height: normal;
+  padding: 20rpx 70rpx;
+  font-size: 30rpx;
+  border: none;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.picker{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border: 2rpx solid #f2f2f2;
+  z-index: 999;
+}

@@ -1,0 +1,15 @@
+<view style="text-align:center;">已搜索设备数量{{devices.length}}</view> 
+<scroll-view class="venues_list" scroll-y="true" style="height:{{chartHeight}}px">
+  <block wx:for="{{devices}}" wx:key="{{test}}">
+    <view class="venues_item" data-name="{{item.name}}">
+      <text class="status">设备名称:{{item.name}}</text>
+      <text class="status">MAC地址:{{item.deviceId}}</text>
+      <view class="btn-connet" id="{{item.deviceId}}" data-name="{{item.name}}" bindtap ="connectTO">连 接</view>
+    </view>
+  </block>
+</scroll-view>
+<view class="content">
+  <button  class="button" bindtap="lanya3">搜索</button>
+</view>
+
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

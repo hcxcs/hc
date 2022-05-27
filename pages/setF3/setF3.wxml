@@ -1,0 +1,36 @@
+<!--pages/setF3/setF3.wxml-->
+<form bindsubmit="orderForm">
+
+  <view class="container">
+    <view class="line">
+      <text class="order-title">主用</text>
+      <input class="ip-ipt" name="mainIp" type="number" value="{{ mainIp1 }}" bindinput="mainIpt1"/>.
+      <input class="ip-ipt" name="mainIp" type="number" value="{{ mainIp2 }}" bindinput="mainIpt2"/>.
+      <input class="ip-ipt" name="mainIp" type="number" value="{{ mainIp3 }}" bindinput="mainIpt3"/>.
+      <input class="ip-ipt" name="mainIp" type="number" value="{{ mainIp4 }}" bindinput="mainIpt4"/>:
+      <input class="ip-ipt" name="mainPort" type="number" value="{{ mainIp5 }}" bindinput="mainIpt5"/>
+      <text class="order-unit">4+2=6BYTE</text>
+    </view>
+    <view class="line">
+      <text class="order-title">备用</text>
+      <input class="ip-ipt" name="reseverIp" type="number" value="{{ reseverIp1 }}"  bindinput="reseverIpt1"/>.
+      <input class="ip-ipt" name="reseverIp" type="number" value="{{ reseverIp2 }}"  bindinput="reseverIpt2"/>.
+      <input class="ip-ipt" name="reseverIp" type="number" value="{{ reseverIp3 }}"  bindinput="reseverIpt3"/>.
+      <input class="ip-ipt" name="reseverIp" type="number" value="{{ reseverIp4 }}"  bindinput="reseverIpt4"/>:
+      <input class="ip-ipt" name="reseverPort" type="number" value="{{ reseverIp5 }}" bindinput="reseverIpt5"/>
+      <text class="order-unit">4+2=6BYTE</text>
+    </view>
+    <view class="line">
+      <text class="order-title">APN</text>
+      <input class="apn-ipt" name="apn" type="text" value="{{ apn }}" bindinput="apnIpt"/>
+      <text class="order-unit">16BYTE</text>
+    </view>
+
+    <view class="btn-line">
+      <button bindtap="orderRead">读 取</button>
+      <button formType="submit" style="margin-left:150rpx;">设 置</button>
+    </view>
+  </view>
+
+</form>
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

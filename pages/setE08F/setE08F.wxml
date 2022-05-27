@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="item-panel">
+    <view class="view-item">
+      <text class="ipt_left">信息点Pn</text>
+      <input class="ipt_right" name="pointIndex" type="number" value="{{ pointIndex }}" bindinput="reseverPointIndex"/>
+    </view>
+    <view class="view-item">
+      <van-checkbox value="{{ isFull }}" shape="square" bind:change="fullChange">
+        全选
+      </van-checkbox>
+    </view>
+    <view wx:for="{{ checkList }}">
+      <view wx:if="{{item.display}}" class="view-item">
+        <van-checkbox value="{{ item.isCheck }}" data-index="{{ index }}" shape="square" bind:change="onChange">
+          {{ item.checkName }}
+        </van-checkbox>
+        <view wx:if="{{item.ipt === 'picker'}}">
+          <input class="noIpt" value="{{ item.FiledValue }}" data-value="{{ item.FiledValue }}" data-index="{{ index }}" disabled="disable" bindtap="showPicker"/>
+        </view>
+        <view wx:if="{{item.ipt === 'number'}}">
+          <input class="ipt" name="{{item.type}}" type="number" value="{{ item.FiledValue }}" data-index="{{ index }}" bindinput="reseverNumber"/>
+        </view>
+        <view wx:if="{{item.ipt === 'multiple'}}" style="padding-top: 15rpx;">
+          <view wx:for="{{item.columns}}" wx:for-index="index2" wx:for-item="item2">
+            <text class="ipt_left">{{ item2.displayValue }}</text>
+            <!-- <input class="ipt_right" name="{{item2.type}}" type="number" value="{{ item2.FiledValue }}" data-index="{{ index }}" data-index2="{{ index2 }}"  bindinput="reseverMultiple"/> -->
+            <input class="ipt_right" value="{{ item2.FiledValue }}" data-value="{{ item2.FiledValue }}" data-index="{{ index }}" data-index2="{{ index2 }}" disabled="disable" bindtap="showMultiplePicker"/>
+            <view class="picker" wx:if="{{ isMultiplePicker===item2.type }}">
+              <van-picker columns="{{ item2.columns }}" data-index="{{index}}" data-index2="{{index2}}" value-key="FiledValue" default-index="{{ item2.index }}" show-toolbar="true" bind:confirm="multiplePickerConfirm" bind:cancel="multiplePickerCancel" />
+            </view>
+          </view>
+        </view>
+        <view class="picker" wx:if="{{ isPicker===item.type }}">
+          <van-picker columns="{{ item.columns }}" data-index="{{index}}" value-key="FiledValue" default-index="{{ item.index }}" show-toolbar="true" bind:confirm="pickerConfirm" bind:cancel="pickerCancel" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btn-line">
+    <button bindtap="orderRead">读 取</button>
+    <button bindtap="orderSet" style="margin-left:150rpx;">设 置</button>
+  </view>
+</view>
+
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

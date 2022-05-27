@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="item-panel">
+    <view class="view-item">
+      <view>
+        <text class="title">告警屏蔽选项</text>
+        <input class="noIpt" value="{{ FiledValue }}" data-value="{{ FiledValue }}" data-index="{{ index }}" disabled="disable" bindtap="showPicker"/>
+      </view>
+    </view>
+    <view class="view-item">
+      <van-checkbox value="{{ isFull }}" shape="square" bind:change="fullChange">
+        全选
+      </van-checkbox>
+    </view>
+    <view class="view-item" wx:for="{{ checkList }}">
+      <van-checkbox value="{{ item.isCheck }}" data-index="{{ index }}" shape="square" bind:change="onChange">
+        {{ item.checkName }}
+      </van-checkbox>
+    </view>
+  </view>
+  <view class="btn-line">
+    <button bindtap="orderRead">读 取</button>
+    <button bindtap="orderSet" style="margin-left:150rpx;">设 置</button>
+  </view>
+</view>
+
+<view class="picker" wx:if="{{ isPicker}}">
+  <van-picker columns="{{ columns }}" data-index="{{index}}" value-key="FiledValue" default-index="{{ index }}" show-toolbar="true" bind:confirm="pickerConfirm" bind:cancel="pickerCancel" />
+</view>
+<van-popup show="{{ isPopup }}"><image src="../../image/loading-2.gif" style="width:100rpx;height:100rpx;"></image></van-popup>

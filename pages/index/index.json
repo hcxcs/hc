@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "首 页",
+  "onReachBottomDistance": 50,
+  "navigationBarBackgroundColor": "#2f9bff",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-button": "../../miniprogram_npm/vant-weapp/button/index",
+    "van-tree-select": "../../miniprogram_npm/vant-weapp/tree-select/index",
+    "van-action-sheet": "../../miniprogram_npm/vant-weapp/action-sheet/index"
+  }
+}

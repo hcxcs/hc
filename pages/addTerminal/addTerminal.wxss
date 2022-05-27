@@ -1,0 +1,57 @@
+/**scan.wxss**/
+.container{
+  padding: 30rpx 10rpx 100rpx;
+}
+
+.scanImg{
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.button{
+  position: absolute;
+  background-color: #2f9bff;
+  color: #fff;
+  right: 80rpx;
+  top: -5rpx;
+}
+
+.dataItem,.singleItem{
+  padding: 10rpx 20rpx;
+  position: relative;
+}
+
+
+
+.dataItem>text{
+  position: absolute;
+  left: 20rpx;
+  bottom: 35rpx;
+}
+
+.noIpt{
+  border: 2rpx solid #d3d3d3;
+  border-radius: 5px;
+  padding: 15rpx;
+  margin-top: 5rpx;
+  width: 65%;
+  margin-left: 165rpx;
+}
+
+.btn{
+  width: 100%;
+  text-align: center;
+  padding: 15rpx 0;
+  line-height: 2;
+  font-size: 32rpx;
+  background-color: #2f9bff;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+.singleObj{
+  border: 1px dashed #2f9bff;
+  margin: 20rpx 0;
+}

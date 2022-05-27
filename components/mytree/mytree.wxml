@@ -1,0 +1,13 @@
+<!--pages/components/mytree/mytree.wxml-->
+<view class="container">
+  <view wx:for="{{ model }}" wx:for-item="courts">
+    <view style="padding: 10rpx 0;">
+      <image wx:if='{{ courts.children.length > 0 }}' bindtap='toggle' src="/image/page_turning_right.png"  class='item-sImg' data-children='{{ courts.children }}' data-id='{{courts.id}}'></image>
+      <image wx:else src='/image/page_turning_right.png'  class='item-sImg'></image>
+      <text bindtap='tapItem' data-itemid='{{ courts.id }}' data-value='{{ courts.text }}' data-children='{{ courts.children }}'>{{ courts.text }}</text>
+    </view>
+    <view style='padding-left: 25rpx;' wx:if='{{ courts.children.length > 0 }}' hidden='{{ !open&&courts.id==checkCourt }}'>
+      <mytree model='{{ courts.children }}'></mytree>
+    </view>
+  </view>
+</view>

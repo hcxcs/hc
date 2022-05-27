@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/terminalDetails/terminalDetails",
+    "pages/setE08F/setE08F",
+    "pages/readSSSJ/readSSSJ",
+    "pages/setNWParam/setNWParam",
+    "pages/readSJTC/readSJTC",
+    "pages/login/login",
+    "pages/setE10F/setE10F",
+    "pages/setE02/setE02",
+    "pages/setE08X/setE08X",
+    "pages/setE01X/setE01X",
+    "pages/setF31/setF31",
+    "pages/bluetoothLogin/bluetoothLogin",
+    "pages/setParam/setParam",
+    "pages/setF133/setF133",
+    "pages/setF3/setF3",
+    "pages/setF9/setF9",
+    "pages/setF90/setF90",
+    "pages/setTerminal/setTerminal",
+    "pages/choiceRout/choiceRout",
+    "pages/addTerminal/addTerminal"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "permission":{
+    "scope.userLocation":{
+      "desc":"请点击确定"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}
